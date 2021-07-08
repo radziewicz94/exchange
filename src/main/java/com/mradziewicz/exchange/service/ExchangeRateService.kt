@@ -18,8 +18,8 @@ class ExchangeRateService {
     fun cantorExchangePlnToCurrency(currency: String,amount: Double): String{
         return "Koszt sprzedaży waluty dla kantoru to: " + cantorSellCurrency(currency, amount)
     }
-    fun cantorExchangeTwoCurrency(currency1: String, currency2: String, amount: Double): String {
-        return "Wymiana " + currency1 + " na " + currency2 +": " + cantorBuyAndSellCurrency(currency1, currency2, amount);
+    fun cantorExchangeTwoCurrency(sellCurrency: String, buyCurrency: String, amount: Double): String {
+        return "Wymiana " + sellCurrency + " na " + buyCurrency +": " + cantorBuyAndSellCurrency(sellCurrency, buyCurrency, amount);
     }
     fun cantorBuyCurrency(currency: String, amount: Double): BigDecimal{
         val currency = getCurrencyFromNbp(currency)
