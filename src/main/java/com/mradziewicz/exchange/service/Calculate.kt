@@ -8,7 +8,6 @@ import java.math.RoundingMode
 @Service
 class Calculate {
 
-   // @Value(${calculate.provision}")
     val provision = 0.98
 
     fun calculateExchangePlnToCurrency(currency: Double, amount: Double): BigDecimal{
